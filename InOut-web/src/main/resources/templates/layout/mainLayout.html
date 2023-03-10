@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html
+    lang="ko"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <th:block th:include="common/head :: commonMetaAndTitle" />
+    <th:block th:include="common/head :: commonStyle" />
+    <th:block layout:fragment="head" th:remove="tag" />
+</head>
+
+<!-- <body th:with="uploadPath=${@environment.getProperty('service.aws_domain')} + ${@environment.getProperty('service.upload')}"> -->
+<body>
+    <div class="wrap">
+        <div th:include="common/header :: common" th:remove="tag"></div>
+        <div th:include="common/aside :: common" th:remove="tag"></div>
+        <!-- Content Wrapper. Contains page content -->
+        <th:block layout:fragment="contents" />
+    </div>
+
+    <!--/* 각 페이지에서 추가되는 모달 영역 */-->
+    <div>
+        <th:block layout:fragment="modal" />
+    </div>
+
+    <!-- <div th:include="common/javascript :: common" th:remove="tag"></div> -->
+</body>
+</html>

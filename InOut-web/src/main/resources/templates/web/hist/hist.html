@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"  layout:decorate="layout/mainLayout">
+<body>
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- container_block -->
+        <div id="container-block" layout:fragment="contents" th:remove="tag">
+            <!-- content -->
+            <main id="content" role="main">
+                <!-- 컨텐츠 시작 -->
+                <h2 class="title">내역</h2>
+                <div class="p-3 border-bottom">
+                    <div class="row justify-content-between">
+                        <div class="col-auto">
+                            <form name="searchForm" action="/admin/std/plan/conts" method="GET">
+                                <fieldset>
+                                    <div class="d-flex align-items-center">
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-dark" onclick="location.href='/admin/std/plan/conts/upload'">파일업로드</button>
+                            <button type="button" class="btn btn-dark ml-1" data-toggle="modal" data-target="#modal-new-contents-add" id="btnDel">삭제</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-3">
+                    <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                            <strong class="mr-2">내역</strong>총 <span id="listCnt">0</span>건
+                        </div>
+                    </div>
+                    <div class="main_search_result_list">
+                        <table class="table table-center" id="datatable">
+                            <thead>
+                                <tr>
+                                    <th>날짜</th>
+                                    <th>자산</th>
+                                    <th>구분</th>
+                                    <th>내용</th>
+                                    <th>금액</th>
+                                </tr>
+                            </thead>
+                            <tbody id="contsTbody">
+                                    <tr>
+                                        <td colspan="5">리스트가 없습니다.</td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- <th:block th:include="common/paging :: paging_Fragment(fnc=*{'fn_go_page(this)'}, pageId=*{'pageName1'})" /> -->
+                </div>
+                
+                <!-- <div class="hr"></div> -->
+                <!-- 컨텐츠 끝 -->
+            </main>
+            <!-- ./ content -->
+        </div>
+        <!-- ./ container-block -->
+        
+        <!-- footer -->
+        <!-- <th:block th:include="common/_footer" ></th:block> -->
+        <!-- ./ footer -->
+    </div>
+    <!-- ./ footer -->
+    
+    <!-- modal -->
+    <div layout:fragment="modal" th:remove="tag">
+    </div>
+    <!-- ./ modal -->
+</body>
+</html>

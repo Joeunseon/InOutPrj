@@ -1,0 +1,9 @@
+.textOverDefault {
+    overflow:hidden;
+    white-space : nowrap;
+    text-overflow: ellipsis;
+}
+#makeupPeriodTbody .bg-highlight {
+    background:#e2eaff
+}
+#modal-make-up .fc-header-toolbar .fc-center{ width: 100%;}

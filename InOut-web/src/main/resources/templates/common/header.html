@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="common">
+    <header id="header">
+        <div class="row">
+            <div class="col-auto">
+                <div class="left">
+                    <a href="/hist" class="logo">
+                        <img src="/web/images/inout_logo_white.png" alt="InOut">
+                        <!-- <span>InOut</span> -->
+                    </a>
+                    <!-- <span style="color:#FFF;text-indent:10px" th:text="${'(' + session.SESSION_KEY_ADMIN.decAccountId + ')' + session.SESSION_KEY_ADMIN.decAccountNm}">
+                    </span> -->
+                </div>
+            </div>
+            <div class="col">
+                <nav class="gnb">
+                    <ul>
+                        <!-- <th:block th:each="item : ${topMenuList}">
+                            <li><a th:href="${item.sTopUri}" th:data-gnb-code="${item.sIcon}"><span th:text="${item.sMenuNm}"></span></a></li>
+                        </th:block> -->
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-auto">
+                <div class="right">
+                    <button type="button" class="btn-my-setting" id="mySetting" data-toggle="dropdown"><i class="material-icons">settings</i></button>
+                    <div class="dropdown-menu" aria-labelledby="mySetting">
+                        <a href="#" onclick="window.open('/admin/pwd','비밀번호 변경','status=1, width=500, height=270, resizable=1, scrollbars=1');" class="dropdown-item">비밀번호 변경</a>
+                    </div>
+                    <button type="button" class="btn-logout" onclick="document.location.href='/logout'"><i class="material-icons">logout</i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+</html>
