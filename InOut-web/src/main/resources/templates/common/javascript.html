@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html 
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" >
+    <div th:fragment="common">
+        <!-- 퍼블 ui.js  -->
+        <script src="/web/js/ui.js" defer></script>
+        
+        <!--/* 각 페이지에서 추가되는 script */-->
+        <script layout:fragment="javascript"></script>
+
+        <script type="text/javascript" th:inline="javascript" th:src="@{/web/js/common/control.js}"></script>
+        <script type="text/javascript" th:inline="javascript" th:src="@{/web/js/common/validator.js}"></script>
+        <script type="text/javascript" th:inline="javascript" th:src="@{/web/js/common/common.js}"></script>
+        <script type="text/javascript" th:inline="javascript" th:src="@{/web/js/common/fileUtils.js}"></script>
+        <script type="text/javascript" th:inline="javascript" th:src="@{/web/js/common/dateUtils.js}"></script>
+        <script type="text/javascript" th:inline="javascript" th:src="@{/web/js/common/selectAjax.js}"></script>
+        <script type="text/javascript" th:inline="javascript" th:src="@{/web/js/common/moment.js}"></script>
+
+        <!-- CKEditor 4.15.0 -->
+        <script src="/web/js/common/ckeditor/ckeditor.js"></script>
+
+        <!-- 추가 JS -->
+        <script src="/web/js/additional.js"></script>
+
+        <script type="text/javascript" th:inline="javascript" th:src="@{${jsName}}"></script>
+        
+    </div>
+    
+    <div th:fragment="commonDefault">
+        <!-- 퍼블 ui.js  -->
+        <script src="/web/js/ui.js" defer></script>
+        
+        <!--/* 각 페이지에서 추가되는 script */-->
+        <script layout:fragment="javascript"></script>
+
+        <script type="text/javascript" th:inline="javascript" th:src="@{/web/js/common/control.js}"></script>
+        <script type="text/javascript" th:inline="javascript" th:src="@{/web/js/common/validator.js}"></script>
+        <script type="text/javascript" th:inline="javascript" th:src="@{/web/js/common/common.js}"></script>
+        <script type="text/javascript" th:inline="javascript" th:src="@{/web/js/common/fileUtils.js}"></script>
+        <script type="text/javascript" th:inline="javascript" th:src="@{/web/js/common/dateUtils.js}"></script>
+
+        <!-- 추가 JS -->
+        <script src="/web/js/additional.js"></script>
+
+        <script type="text/javascript" th:inline="javascript" th:src="@{${jsName}}"></script>
+        
+    </div>
+    
+    <div th:fragment="login">
+        <!-- 퍼블리셔가 작성한 ui.js  -->
+        <script src="/web/js/ui.js" defer></script>
+
+        <!--/* 각 페이지에서 추가되는 script */-->
+        <script layout:fragment="javascript"></script>
+        
+        <script type="text/javascript" th:inline="javascript" th:src="@{/web/js/common/control.js}"></script>
+        <script type="text/javascript" th:inline="javascript" th:src="@{/web/js/common/validator.js}"></script>
+        <script type="text/javascript" th:inline="javascript" th:src="@{/web/js/common/common.js}"></script>
+        <script type="text/javascript" th:inline="javascript" th:src="@{/web/js/common/fileUtils.js}"></script>
+        <script type="text/javascript" th:inline="javascript" th:src="@{/web/js/common/dateUtils.js}"></script>
+        
+        <!-- 추가 JS -->
+        <script src="/web/js/additional.js"></script>
+        
+        <script type="text/javascript" th:inline="javascript" th:src="@{${jsName}}"></script>
+        
+    </div>
+</html>
